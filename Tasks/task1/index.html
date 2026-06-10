@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Profile Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <svg class="logo" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+                <div class="search-bar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+            <div class="nav-right">
+                <nav class="nav-links">
+                    <a href="#" class="nav-item active">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                        <span>Home</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                        <span>Network</span>
+                    </a>
+                    <button id="theme-toggle" class="theme-btn">
+                        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-layout">
+        <div class="profile-container">
+            <section class="card profile-header-card">
+                <div class="banner-wrapper">
+                    <svg class="profile-banner" viewBox="0 0 800 200" preserveAspectRatio="none">
+                        <defs>
+                            <linearGradient id="banner-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#0f172a" />
+                                <stop offset="50%" stop-color="#1e1b4b" />
+                                <stop offset="100%" stop-color="#311042" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="100%" height="100%" fill="url(#banner-grad)"/>
+                        <circle cx="200" cy="100" r="150" fill="#2563eb" opacity="0.1" />
+                        <path d="M 0,200 L 800,100 L 800,200 Z" fill="#1e293b" opacity="0.2" />
+                    </svg>
+                </div>
+                <div class="profile-info-wrapper">
+                    <div class="avatar-holder">
+                        <svg class="profile-avatar" viewBox="0 0 100 100">
+                            <defs>
+                                <clipPath id="avatar-clip">
+                                    <circle cx="50" cy="50" r="48" />
+                                </clipPath>
+                                <linearGradient id="avatar-grad" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#3b82f6"/>
+                                    <stop offset="100%" stop-color="#1d4ed8"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="50" cy="50" r="50" fill="#fff" class="avatar-border"/>
+                            <g clip-path="url(#avatar-clip)">
+                                <rect width="100%" height="100%" fill="url(#avatar-grad)"/>
+                                <circle cx="50" cy="35" r="20" fill="#fff"/>
+                                <path d="M20,80 C20,60 30,55 50,55 C70,55 80,60 80,80 Z" fill="#fff"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="profile-text-actions">
+                        <div class="profile-details">
+                            <h1 class="profile-name">Alex Rivera</h1>
+                            <p class="profile-headline">Senior Full Stack Developer | React, Node.js, Spring Boot Specialist</p>
+                            <p class="profile-meta">San Francisco, California &bull; <a href="#" class="contact-link">Contact info</a></p>
+                            <p class="profile-connections"><a href="#" class="connections-link">500+ connections</a></p>
+                        </div>
+                        <div class="profile-actions">
+                            <button class="btn btn-primary">Open to</button>
+                            <button class="btn btn-outline">Add profile section</button>
+                            <button class="btn btn-secondary">More</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card about-section">
+                <h2>About</h2>
+                <p>Passionate Full Stack Developer with 7+ years of experience building high-performance web applications. Expert in architectural design patterns, microservices development, and building interactive, beautiful user interfaces. Dedicated to mentoring and continuous learning.</p>
+            </section>
+
+            <section class="card experience-section">
+                <h2>Experience</h2>
+                <div class="experience-list">
+                    <div class="experience-item">
+                        <div class="exp-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                        </div>
+                        <div class="exp-details">
+                            <h3>Senior Software Engineer</h3>
+                            <p class="exp-company">TechCorp Solutions &bull; Full-time</p>
+                            <p class="exp-date">Jan 2021 - Present &bull; 5 yrs</p>
+                            <p class="exp-desc">Led a team of frontend engineers to rebuild the enterprise dashboard using React and Tailwind CSS, increasing page load speeds by 40%.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card education-section">
+                <h2>Education</h2>
+                <div class="education-list">
+                    <div class="education-item">
+                        <div class="edu-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5.89 12.5L12 15.82l6.11-3.33L12 9.18l-6.11 3.32zM12 17.82c-2.48 0-4.5-2.02-4.5-4.5h2c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5h2c0 2.48-2.02 4.5-4.5 4.5z"/></svg>
+                        </div>
+                        <div class="edu-details">
+                            <h3>University of California, Berkeley</h3>
+                            <p class="edu-degree">Bachelor of Science in Computer Science</p>
+                            <p class="edu-date">2014 - 2018</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card skills-section">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-tag">React.js</div>
+                    <div class="skill-tag">JavaScript</div>
+                    <div class="skill-tag">Spring Boot</div>
+                    <div class="skill-tag">CSS Grid/Flexbox</div>
+                    <div class="skill-tag">Node.js</div>
+                    <div class="skill-tag">REST APIs</div>
+                </div>
+            </section>
+
+            <section class="card accomplishments-section">
+                <h2>Accomplishments</h2>
+                <ul class="accomplishments-list">
+                    <li>Developed and published open-source CSS micro-framework with 5k+ GitHub stars.</li>
+                    <li>Speaker at JSConf 2023: "Re-imagining micro-frontends with React".</li>
+                </ul>
+            </section>
+
+            <section class="card activity-section">
+                <h2>Activity Feed</h2>
+                <div id="posts-container" class="posts-list"></div>
+                <div id="loading" class="loading-spinner">Loading posts...</div>
+            </section>
+        </div>
+
+        <aside class="sidebar">
+            <section class="card people-card">
+                <h2>People you may know</h2>
+                <div class="people-list">
+                    <div class="person-item">
+                        <svg class="person-avatar" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="48" fill="#e2e8f0"/>
+                            <path d="M30,85 C30,65 40,60 50,60 C60,60 70,65 70,85" fill="#94a3b8"/>
+                            <circle cx="50" cy="40" r="16" fill="#94a3b8"/>
+                        </svg>
+                        <div class="person-info">
+                            <h4>Sarah Jenkins</h4>
+                            <p>Product Manager at Innovate LLC</p>
+                            <button class="btn-connect">Connect</button>
+                        </div>
+                    </div>
+                    <div class="person-item">
+                        <svg class="person-avatar" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="48" fill="#e2e8f0"/>
+                            <path d="M30,85 C30,65 40,60 50,60 C60,60 70,65 70,85" fill="#475569"/>
+                            <circle cx="50" cy="40" r="16" fill="#475569"/>
+                        </svg>
+                        <div class="person-info">
+                            <h4>Marcus Vance</h4>
+                            <p>Lead UX Architect</p>
+                            <button class="btn-connect">Connect</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
